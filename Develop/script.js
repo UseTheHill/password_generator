@@ -36,23 +36,23 @@ function generatePassword() {
     let genPassword = alphaResult + upperResult + intResult + charResult;
 
     for (let i = 0; i < parseInt(strength); i++) {
-
+      // console.log(alphaResult) 
       if(alpha) {
         alphaResult += alphabetSmall.charAt(Math.floor(Math.random() * alphabetSmall.length));
       }
-    // console.log(alphaResult)
+      //console.log(upperResult)
       if(upper) {
         upperResult += alphabetCaps.charAt(Math.floor(Math.random() * alphabetCaps.length));
       }
-      //console.log(upperResult)
+      //console.log(intresult)
       if (int) {
         intResult += numbers.charAt(Math.floor(Math.random() * numbers.length));
       }
-      //console.log(intresult)
+     //console.log (charResult)
       if (char) {
         charResult += special.charAt(Math.floor(Math.random() * special.length));
       }
-      //console.log (charResult)
+      
 
       if (alpha) { genPassword += alphaResult.charAt(i); }
       if (upper) { genPassword += upperResult.charAt(i); }
