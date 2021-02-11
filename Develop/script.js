@@ -62,24 +62,23 @@ function generatePassword() {
   
     if (!alpha && !upper && !int && !char) {
       alert("You must choose an option.");
-  }
+    } 
+    // log results of these options
+    // genPassword witll scramble to give finalPassword
+    // resize finalPassword to the size that the user indicated.
+    console.log(alphaResult, upperResult, intResult, charResult);
 
-  // log results of these options
-  // genPassword witll scramble to give finalPassword
-  // resize finalPassword to the size that the user indicated.
-  console.log(alphaResult, upperResult, intResult, charResult);
+    let userPassword = genPassword.substring(0, strength);
+    let finalPassword = userPassword.split('').sort(function() {return 0.5 - Math.random() }).join('');
 
-  let userPassword = genPassword.substring(0, strength);
-  let finalPassword = userPassword.split('').sort(function() {return 0.5 - Math.random() }).join('');
+    console.log(genPassword);
+    console.log(userPassword);
 
-  console.log(genPassword);
-  console.log(userPassword);
+    return finalPassword;
 
-  return finalPassword;
-
-} else {
-   alert("Please input a number from 8 - 128."); // Will alert if conditions are outside the 8 - 128 strength of password
-  
+  } else {
+    alert("Please input a number from 8 - 128."); // Will alert if conditions are outside the 8 - 128 strength of password
+    
   }
 
 }
