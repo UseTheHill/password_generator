@@ -10,12 +10,13 @@ When you open the page you will see the button 'generate password'.  Once that b
  https://usethehill.github.io/password_generator/
 
 ---
-## Screenshot of page:
+## Demo of page:
 
-![](Assets/screenshot_password_generator.png)
+![](Assets/mockup.gif)
 
 ---
 ## Programs used:
 
 - JavaScript
-- 
+- HTML
+- CSS
